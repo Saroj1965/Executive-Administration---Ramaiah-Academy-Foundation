@@ -1,0 +1,6 @@
+Item_Code,Approval_Item,Function_Area,Requested_By,Financial_Value,Approver,Date_Submitted,Required_By,Priority,Status,Document_Ref,Follow_Up_Date,SLA_Aging
+APP-401,CapEx: 12 High-Performance Workstation GPUs for Simulation Cluster,Strategy,IT Head,₹8,50,000,Mr. Velluri / Finance,2026-09-04,2026-09-09,Critical,Under Review,PO_Req_2026_0904_GPU.pdf,2026-09-08,24h Remaining
+APP-402,MoU Agreement: Valdel Advanced Technologies Co-Branding & IP,VC,Strategy Lead,Non-Financial,Mr. Velluri,2026-09-05,2026-09-08,High,Awaiting Signature,Valdel_MoU_Final_Draft.pdf,2026-09-08,Due Today
+APP-403,Faculty Appointment: Senior CAD / SOLIDWORKS Instructor,CHRO,HR Ops,₹14.2 LPA,CHRO,2026-09-03,2026-09-07,High,Approved,Offer_Ltr_Cad_Faculty_Signed.pdf,2026-09-07,Cleared
+APP-404,Corporate Training Lab Software License Renewal (Annual),Strategy,Training Head,₹3,40,000,Head of Strategy,2026-09-05,2026-09-12,Medium,Pending Review,Invoice_License_Renewal_2026.pdf,2026-09-09,48h Remaining
+APP-405,Marketing Budget: Software Engineering Finishing School Campaign,Strategy,Marketing Head,₹1,75,000,Head of Strategy,2026-09-06,2026-09-11,Medium,Pending Review,Digital_Ad_Spend_Budget_Q3.pdf,2026-09-09,72h Remaining

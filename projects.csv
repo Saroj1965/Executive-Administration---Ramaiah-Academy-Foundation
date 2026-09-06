@@ -1,0 +1,6 @@
+Project_ID,Project_Name,Function_Area,Sponsor,Owner,Start_Date,Target_Date,Progress_Pct,Status,Priority,RAG_Status,Budget_Allocated,Next_Milestone,Key_Deliverables
+PRJ-01,Dassault Innovation Centre Lab Phase 2,VC,Mr. Velluri,Strategy Head,2026-07-01,2026-10-15,75,In Progress,Critical,Green,₹25,00,000,Delivery & setup of 30 GPU workstations,30-seat simulation cluster + V6 cloud licenses
+PRJ-02,VLSI Finishing School Placement Drive,Strategy,Head of Strategy,Placement Head,2026-08-01,2026-09-28,88,In Progress,High,Green,₹3,50,000,Conduct placement fair with 12 semiconductor firms,88% batch placed with avg 7.2 LPA
+PRJ-03,Academy Faculty Performance & KPI Overhaul,CHRO,CHRO,HR Ops Head,2026-08-15,2026-09-22,40,Delayed,Critical,Amber,Internal,CHRO approval on revised KPI scorecard,Incentive alignment with student live project completion
+PRJ-04,Embedded Systems & IoT Automotive CoE,Strategy,Head of Strategy,Lab Director,2026-07-15,2026-09-15,85,In Progress,High,Green,₹12,00,000,Customs clearance & installation of IoT boards,Co-branded automotive embedded certification
+PRJ-05,B.Tech / M.Tech Software Finishing School Bridge Batch,Strategy,Head of Strategy,Training Head,2026-08-10,2026-10-05,60,In Progress,Medium,Green,₹4,00,000,Complete entrance aptitude assessments for cohort,Full-stack cloud & software curriculum delivery

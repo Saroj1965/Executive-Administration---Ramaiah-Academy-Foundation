@@ -1,0 +1,5 @@
+Requisition_ID,Role_Title,Department,Hiring_Manager,Priority,Current_Stage,Aging_Days,Target_Joining_Date,Status,Shortlisted_Candidates,Interviewer,Notes
+REQ-01,Chief VLSI Trainer,Advanced VLSI,CHRO,Critical,Final Interview,28,2026-09-18,Urgent Action Required,2,CHRO & External Industry Advisor,Must close offer today to protect Oct 1 batch launch
+REQ-02,Senior CAD / SOLIDWORKS Instructor,3D Design,Training Head,High,Offer Released,14,2026-09-25,Candidate Verifying Offer,1,Training Head,Candidate accepted verbally; awaiting formal sign-off
+REQ-03,Embedded Systems & IoT Lab Specialist,Embedded Systems,Lab Director,High,Technical Screening,10,2026-10-01,In Screening,4,Lab Lead & Valdel Technical VP,Strong candidate pool from automotive Tier-1 supplier background
+REQ-04,Full Stack Software Mentor,Software Engineering,Training Head,Medium,Profile Sourcing,5,2026-10-15,Active Sourcing,8,HR Talent Acquisition,Screening profiles with React/Node/AWS production experience

@@ -1,0 +1,7 @@
+Waiting_ID,Stakeholder,Organisation,Department,Function_Area,Matter_Pending,Date_Requested,Expected_Date,Days_Waiting,Priority,Follow_Ups_Sent,Last_Follow_Up,Escalation_Required
+WAIT-01,Director - Techno Centre,Techno Centre Engineering,Engineering Prototyping,Strategy,Finalized syllabus for Corporate Automotive CAD Cohort,2026-09-02,2026-09-06,6,Critical,2,2026-09-06,Yes - Escalate to Strategy Head
+WAIT-02,Legal Counsel (M/s Rao & Associates),External Legal Counsel,Corporate Legal,VC,Indemnity clause review for Dassault Innovation Centre agreement,2026-09-05,2026-09-09,3,High,1,2026-09-06,No
+WAIT-03,Finance Controller,Ramaiah Central Accounts,Finance & Accounts,VC,Q2 batch revenue & trainer payout reconciliation report,2026-09-01,2026-09-07,7,Critical,3,2026-09-06,Yes - Escalate in Friday Review
+WAIT-04,Logistics Manager,Valdel Advanced Technologies,Supply Chain,Strategy,Customs clearance air waybill and delivery slot for IoT boards,2026-09-04,2026-09-10,4,High,1,2026-09-05,No
+WAIT-05,Placement Officer,Ramaiah Career Services,Placement Cell,Strategy,Consolidated placement and CTC records for VLSI Batch 26A,2026-09-03,2026-09-08,5,High,2,2026-09-06,No - Due Today
+WAIT-06,HR Ops Lead,Ramaiah Academy Foundation,Human Resources,CHRO,Revised Faculty Appraisal KPI Matrix with trainer feedback,2026-09-01,2026-09-04,7,Critical,3,2026-09-05,Yes - Address in 11:30 AM CHRO review

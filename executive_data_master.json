@@ -1,0 +1,372 @@
+{
+  "system": {
+    "version": "2.4",
+    "organization": "Ramaiah Academy Foundation",
+    "executive": "Sarojini",
+    "title": "Executive Administration Control Centre",
+    "workload_targets": { "VC": 20, "CHRO": 40, "Strategy": 40 }
+  },
+  "actions": [
+    {
+      "id": "ACT-101",
+      "title": "Dassault Innovation Centre Expansion MoU term sheet review",
+      "support": "VC",
+      "requestedBy": "Mr. Velluri",
+      "owner": "Sarojini (EA)",
+      "department": "Executive Office",
+      "priority": "Critical",
+      "dateCreated": "2026-09-06",
+      "dueDate": "2026-09-10",
+      "status": "In Progress",
+      "nextAction": "Brief Mr. Velluri on space allocation clause",
+      "dependency": "Legal clearance",
+      "escalationRequired": "No"
+    },
+    {
+      "id": "ACT-102",
+      "title": "Overdue Faculty KPI appraisal guidelines review and sign-off",
+      "support": "CHRO",
+      "requestedBy": "CHRO",
+      "owner": "HR Ops Head",
+      "department": "Human Resources",
+      "priority": "Critical",
+      "dateCreated": "2026-09-01",
+      "dueDate": "2026-09-04",
+      "status": "Overdue",
+      "nextAction": "Escalate in 11:30 AM CHRO review",
+      "dependency": "Department feedback",
+      "escalationRequired": "Yes"
+    },
+    {
+      "id": "ACT-103",
+      "title": "Techno Centre corporate training commercial pricing proposal",
+      "support": "Strategy",
+      "requestedBy": "Strategy Head",
+      "owner": "Strategy Lead",
+      "department": "Strategic Initiatives",
+      "priority": "High",
+      "dateCreated": "2026-09-05",
+      "dueDate": "2026-09-08",
+      "status": "In Progress",
+      "nextAction": "Reconcile delivery margins with Finance",
+      "dependency": "Finance cost model",
+      "escalationRequired": "No"
+    },
+    {
+      "id": "ACT-104",
+      "title": "Final interview round for Chief VLSI Trainer candidate",
+      "support": "CHRO",
+      "requestedBy": "CHRO",
+      "owner": "CHRO",
+      "department": "Human Resources",
+      "priority": "Critical",
+      "dateCreated": "2026-09-03",
+      "dueDate": "2026-09-09",
+      "status": "In Progress",
+      "nextAction": "Confirm candidate slot for 3:30 PM",
+      "dependency": "Candidate availability",
+      "escalationRequired": "No"
+    },
+    {
+      "id": "ACT-105",
+      "title": "Valdel Embedded Lab IoT hardware board customs clearance",
+      "support": "Strategy",
+      "requestedBy": "Lab Director",
+      "owner": "Lab Admin",
+      "department": "Embedded Systems",
+      "priority": "Medium",
+      "dateCreated": "2026-09-02",
+      "dueDate": "2026-09-11",
+      "status": "Waiting",
+      "nextAction": "Call logistics agent regarding customs release",
+      "dependency": "Air waybill document",
+      "escalationRequired": "No"
+    },
+    {
+      "id": "ACT-106",
+      "title": "Board of Governors quarterly briefing presentation (10 slides)",
+      "support": "VC",
+      "requestedBy": "Mr. Velluri",
+      "owner": "Sarojini (EA)",
+      "department": "Executive Office",
+      "priority": "High",
+      "dateCreated": "2026-09-04",
+      "dueDate": "2026-09-15",
+      "status": "In Progress",
+      "nextAction": "Consolidate Q2 placement numbers from Career team",
+      "dependency": "Q2 Finance & Placement reports",
+      "escalationRequired": "No"
+    },
+    {
+      "id": "ACT-107",
+      "title": "Karnataka Skill Development Commissioner VIP visit briefing note",
+      "support": "VC",
+      "requestedBy": "Mr. Velluri",
+      "owner": "Sarojini (EA)",
+      "department": "Executive Office",
+      "priority": "High",
+      "dateCreated": "2026-09-05",
+      "dueDate": "2026-09-09",
+      "status": "In Progress",
+      "nextAction": "Print 1-page executive campus profile & lab route",
+      "dependency": "Itinerary confirmation",
+      "escalationRequired": "No"
+    }
+  ],
+  "priorities": [
+    { "id": "P-1", "text": "Deliver 90-sec morning brief to Mr. Velluri", "func": "VC", "completed": true },
+    { "id": "P-2", "text": "Escalate Overdue Faculty KPI matrix to CHRO", "func": "CHRO", "completed": false },
+    { "id": "P-3", "text": "Review Dassault Addendum term sheet with Legal", "func": "VC", "completed": false },
+    { "id": "P-4", "text": "Follow up on Valdel IoT hardware shipment customs", "func": "Strategy", "completed": false },
+    { "id": "P-5", "text": "Consolidate Q2 placement report for Board deck", "func": "Strategy", "completed": true }
+  ],
+  "meetings": [
+    {
+      "id": "MTG-01",
+      "date": "2026-09-08",
+      "time": "09:00 AM - 09:15 AM",
+      "name": "VC Daily Briefing & Priority Alignment",
+      "classType": "A",
+      "func": "VC",
+      "participants": "Mr. Velluri, Sarojini",
+      "briefingStatus": "Ready (1-Page)",
+      "deliverable": "Immediate Action Log"
+    },
+    {
+      "id": "MTG-02",
+      "date": "2026-09-08",
+      "time": "11:30 AM - 12:30 PM",
+      "name": "CHRO Faculty Pipeline & Appraisal Review",
+      "classType": "B",
+      "func": "CHRO",
+      "participants": "CHRO, HR Ops, Sarojini",
+      "briefingStatus": "Drafted",
+      "deliverable": "Revised Candidate Shortlist & KPI Log"
+    },
+    {
+      "id": "MTG-03",
+      "date": "2026-09-08",
+      "time": "02:30 PM - 03:30 PM",
+      "name": "Strategy Sync: Dassault Centre Phase 2 Expansion",
+      "classType": "A",
+      "func": "Strategy",
+      "participants": "Mr. Velluri, Dassault Liaison, Strategy Head, Sarojini",
+      "briefingStatus": "Briefing Memo Attached",
+      "deliverable": "Signed Term Sheet & Addendum Draft"
+    },
+    {
+      "id": "MTG-04",
+      "date": "2026-09-08",
+      "time": "04:30 PM - 05:00 PM",
+      "name": "Executive Commitments & Daily Reconciliation",
+      "classType": "C",
+      "func": "EA",
+      "participants": "Sarojini Internal Cadence",
+      "briefingStatus": "N/A",
+      "deliverable": "Reconciled Master Tracker & Tomorrow Agenda"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-201",
+      "subject": "Approve Dassault Centre Phase 2 additional lab lease addendum",
+      "func": "VC",
+      "maker": "Mr. Velluri (VC)",
+      "targetDate": "2026-09-12",
+      "impact": "High (CapEx & Institutional)",
+      "status": "Pending",
+      "recommendation": "Approve based on 140-student intake expansion and Dassault global co-branding benefit"
+    },
+    {
+      "id": "DEC-202",
+      "subject": "Offer letter release for Lead VLSI Instructor candidate",
+      "func": "CHRO",
+      "maker": "CHRO",
+      "targetDate": "2026-09-09",
+      "impact": "Critical (Batch Oct 1 starts)",
+      "status": "Pending",
+      "recommendation": "Match package within Senior Cadre Band 4 to guarantee Oct 1 batch launch"
+    },
+    {
+      "id": "DEC-203",
+      "subject": "15% corporate training fee discount for Techno Centre bulk cohort",
+      "func": "Strategy",
+      "maker": "Head of Strategy",
+      "targetDate": "2026-09-11",
+      "impact": "Medium",
+      "status": "Approved",
+      "recommendation": "Approve discount; volume commitment of 60 engineers guarantees 32% net margin"
+    }
+  ],
+  "approvals": [
+    {
+      "code": "APP-401",
+      "desc": "CapEx: 12 High-Performance Workstation GPUs for Simulation Cluster",
+      "func": "Strategy",
+      "value": "₹8,50,000",
+      "approver": "Mr. Velluri / Finance",
+      "status": "Under Review",
+      "sla": "24h Remaining"
+    },
+    {
+      "code": "APP-402",
+      "desc": "MoU Agreement: Valdel Advanced Technologies Co-Branding & IP",
+      "func": "VC",
+      "value": "Non-Financial",
+      "approver": "Mr. Velluri",
+      "status": "Awaiting Signature",
+      "sla": "Due Today"
+    },
+    {
+      "code": "APP-403",
+      "desc": "Faculty Appointment: Senior CAD / SOLIDWORKS Instructor",
+      "func": "CHRO",
+      "value": "₹14.2 LPA",
+      "approver": "CHRO",
+      "status": "Approved",
+      "sla": "Cleared"
+    },
+    {
+      "code": "APP-404",
+      "desc": "Corporate Training Lab Software License Renewal (Annual)",
+      "func": "Strategy",
+      "value": "₹3,40,000",
+      "approver": "Head of Strategy",
+      "status": "Pending Review",
+      "sla": "48h Remaining"
+    }
+  ],
+  "waiting": [
+    {
+      "id": "WAIT-01",
+      "person": "Director - Techno Centre",
+      "org": "Techno Centre Engineering",
+      "matter": "Finalized syllabus for Corporate Automotive CAD Cohort",
+      "dateRequested": "2026-09-02",
+      "promisedDue": "2026-09-06",
+      "daysWaiting": 6,
+      "followUps": 2,
+      "status": "Overdue"
+    },
+    {
+      "id": "WAIT-02",
+      "person": "Legal Counsel (M/s Rao & Associates)",
+      "org": "External Legal Counsel",
+      "matter": "Indemnity clause review for Dassault Innovation Centre agreement",
+      "dateRequested": "2026-09-05",
+      "promisedDue": "2026-09-09",
+      "daysWaiting": 3,
+      "followUps": 1,
+      "status": "On Track"
+    },
+    {
+      "id": "WAIT-03",
+      "person": "Finance Controller",
+      "org": "Ramaiah Central Accounts",
+      "matter": "Q2 batch revenue & trainer payout reconciliation report",
+      "dateRequested": "2026-09-01",
+      "promisedDue": "2026-09-07",
+      "daysWaiting": 7,
+      "followUps": 3,
+      "status": "Overdue - Escalate"
+    },
+    {
+      "id": "WAIT-04",
+      "person": "Logistics Manager",
+      "org": "Valdel Advanced Technologies",
+      "matter": "Customs clearance air waybill and delivery slot for IoT boards",
+      "dateRequested": "2026-09-04",
+      "promisedDue": "2026-09-10",
+      "daysWaiting": 4,
+      "followUps": 1,
+      "status": "On Track"
+    },
+    {
+      "id": "WAIT-05",
+      "person": "Placement Officer",
+      "org": "Ramaiah Career Services",
+      "matter": "Consolidated placement and CTC records for VLSI Batch 26A",
+      "dateRequested": "2026-09-03",
+      "promisedDue": "2026-09-08",
+      "daysWaiting": 5,
+      "followUps": 2,
+      "status": "Due Today"
+    }
+  ],
+  "projects": [
+    {
+      "id": "PRJ-01",
+      "name": "Dassault Innovation Centre Lab Phase 2",
+      "func": "VC",
+      "progress": 75,
+      "rag": "Green",
+      "deadline": "2026-10-15",
+      "desc": "Expanding 30 high-performance workstation seats and simulation cluster."
+    },
+    {
+      "id": "PRJ-02",
+      "name": "VLSI Finishing School Placement Drive",
+      "func": "Strategy",
+      "progress": 88,
+      "rag": "Green",
+      "deadline": "2026-09-28",
+      "desc": "Direct corporate hiring interviews with 8 semiconductor design firms in Bangalore."
+    },
+    {
+      "id": "PRJ-03",
+      "name": "Academy Faculty Performance & KPI Overhaul",
+      "func": "CHRO",
+      "progress": 40,
+      "rag": "Amber",
+      "deadline": "2026-09-22",
+      "desc": "Aligning incentives with student project completion and corporate feedback."
+    },
+    {
+      "id": "PRJ-04",
+      "name": "Embedded Systems & IoT Automotive CoE",
+      "func": "Strategy",
+      "progress": 85,
+      "rag": "Green",
+      "deadline": "2026-09-15",
+      "desc": "Joint industry certification track co-branded with Valdel Advanced Technologies."
+    },
+    {
+      "id": "PRJ-05",
+      "name": "B.Tech / M.Tech Software Finishing School Bridge Batch",
+      "func": "Strategy",
+      "progress": 60,
+      "rag": "Green",
+      "deadline": "2026-10-05",
+      "desc": "Accelerated software engineering cohort for graduating engineering seniors."
+    }
+  ],
+  "recruitment": [
+    { "id": "REQ-01", "role": "Chief VLSI Trainer", "dept": "Advanced VLSI", "status": "Final Interview", "aging": "28 days", "alert": true },
+    { "id": "REQ-02", "role": "Senior CAD / SOLIDWORKS Instructor", "dept": "3D Design", "status": "Offer Released", "aging": "14 days", "alert": false },
+    { "id": "REQ-03", "role": "Embedded Systems & IoT Lab Specialist", "dept": "Embedded Systems", "status": "Technical Screening", "aging": "10 days", "alert": false },
+    { "id": "REQ-04", "role": "Full Stack Software Mentor", "dept": "Software Engineering", "status": "Profile Sourcing", "aging": "5 days", "alert": false }
+  ],
+  "risks": [
+    {
+      "id": "RSK-01",
+      "title": "Lead VLSI Trainer Sourcing Gap for Oct 1 Cohort",
+      "level": "Critical / Red",
+      "desc": "Batch starting Oct 1 has 42 enrolments but vacant lead instructor position.",
+      "mitigation": "Fast-track candidate Anand Kumar interview; prepare adjunct faculty backup from industry pool."
+    },
+    {
+      "id": "RSK-02",
+      "title": "Dassault Workstation Server GPU Customs Clearance Delay",
+      "level": "Amber",
+      "desc": "Hardware vendor shipment delayed by 4 business days due to GPU customs clearance.",
+      "mitigation": "Activate temporary 30-day cloud VDI simulation licenses so student lab sessions are not disrupted."
+    }
+  ],
+  "events": [
+    { "date": "2026-09-10", "title": "Dassault Systèmes Technical Audit", "desc": "Annual compliance check for Innovation Centre certification.", "days": "2 Days" },
+    { "date": "2026-09-10", "title": "Karnataka Skill Development Commissioner VIP Visit", "desc": "Official delegation review of Ramaiah-Dassault Innovation Centre.", "days": "2 Days" },
+    { "date": "2026-09-15", "title": "New Batch Launch - Embedded Systems & IoT", "desc": "35 enrolled students; kit distribution and lab allocation finalized.", "days": "7 Days" },
+    { "date": "2026-09-18", "title": "Quarterly Board of Governors Meeting", "desc": "Presentation of Academy performance by VC; 10-slide deck required.", "days": "10 Days" },
+    { "date": "2026-09-28", "title": "VLSI Finishing School Mega Placement Fair", "desc": "Bangalore technology park venue; 12 confirmed hiring partners.", "days": "20 Days" }
+  ]
+}

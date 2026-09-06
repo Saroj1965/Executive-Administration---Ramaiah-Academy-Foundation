@@ -1,0 +1,11 @@
+Action_ID,Task_Title,Support_Area,Requested_By,Owner,Department,Priority,Date_Created,Due_Date,Status,Next_Action,Dependency,Escalation_Required
+ACT-101,Dassault Innovation Centre Expansion MoU term sheet review,VC,Mr. Velluri,Sarojini (EA),Executive Office,Critical,2026-09-06,2026-09-10,In Progress,Brief Mr. Velluri on space allocation clause,Legal clearance,No
+ACT-102,Overdue Faculty KPI appraisal guidelines review and sign-off,CHRO,CHRO,HR Ops Head,Human Resources,Critical,2026-09-01,2026-09-04,Overdue,Escalate in 11:30 AM CHRO review,Department feedback,Yes
+ACT-103,Techno Centre corporate training commercial pricing proposal,Strategy,Strategy Head,Strategy Lead,Strategic Initiatives,High,2026-09-05,2026-09-08,In Progress,Reconcile delivery margins with Finance,Finance cost model,No
+ACT-104,Final interview round for Chief VLSI Trainer candidate,CHRO,CHRO,CHRO,Human Resources,Critical,2026-09-03,2026-09-09,In Progress,Confirm candidate slot for 3:30 PM,Candidate availability,No
+ACT-105,Valdel Embedded Lab IoT hardware board customs clearance,Strategy,Lab Director,Lab Admin,Embedded Systems,Medium,2026-09-02,2026-09-11,Waiting,Call logistics agent regarding customs release,Air waybill document,No
+ACT-106,Board of Governors quarterly briefing presentation (10 slides),VC,Mr. Velluri,Sarojini (EA),Executive Office,High,2026-09-04,2026-09-15,In Progress,Consolidate Q2 placement numbers from Career team,Q2 Finance & Placement reports,No
+ACT-107,Karnataka Skill Development Commissioner VIP visit briefing note,VC,Mr. Velluri,Sarojini (EA),Executive Office,High,2026-09-05,2026-09-09,In Progress,Print 1-page executive campus profile & lab route,Itinerary confirmation,No
+ACT-108,SOLIDWORKS CSWE Trainer certification drive progress review,CHRO,CHRO,Training Head,3D Design,Medium,2026-09-02,2026-09-14,In Progress,Verify Dassault exam vouchers distribution,Dassault portal access,No
+ACT-109,Software Engineering bridge batch admissions campaign review,Strategy,Strategy Head,Marketing Head,Software Engineering,High,2026-09-04,2026-09-12,In Progress,Review enquiry-to-application conversion rates,Digital campaign leads,No
+ACT-110,Executive calendar buffer reconciliation for Mr. Velluri,VC,Mr. Velluri,Sarojini (EA),Executive Office,High,2026-09-06,2026-09-08,In Progress,Block strategic deep-work buffers on Tuesday & Thursday,None,No
