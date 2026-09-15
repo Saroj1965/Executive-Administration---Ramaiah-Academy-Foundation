@@ -1,15 +1,638 @@
-<!-- RAMAIAH ACADEMY FOUNDATION - EXECUTIVE OFFICE CONTROL CENTRE -->
-<!-- Primary workspace build for Sarojini (Executive Administration) -->
-<!-- Copy of C:\Users\LENOVO\.gemini\antigravity\brain\645c1f6e-a979-4566-b6eb-4270b301a8d6\executive_control_centre.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url='../../brain/645c1f6e-a979-4566-b6eb-4270b301a8d6/executive_control_centre.html'" />
-  <script>
-    window.location.href = "../../brain/645c1f6e-a979-4566-b6eb-4270b301a8d6/executive_control_centre.html";
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIASAT Payroll — Ramaiah Institute for Advanced Skills and Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; color: #0f172a; }
+    .badge-dept { background-color: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+    @media print {
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      body { background: white !important; font-size: 11pt; color: #000; }
+    }
+  </style>
 </head>
-<body>
-  <p>Loading Ramaiah Academy Foundation Executive Control Centre... If not redirected, <a href="../../brain/645c1f6e-a979-4566-b6eb-4270b301a8d6/executive_control_centre.html">click here</a>.</p>
+<body class="min-h-screen flex flex-col bg-slate-50 antialiased">
+  <header class="bg-[#0e1e38] text-white border-b border-slate-800 sticky top-0 z-40 shadow-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-xl bg-[#881337] text-white font-black text-2xl shadow border border-rose-800">
+            R
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[11px] font-bold tracking-widest text-amber-400 uppercase">Ramaiah Academy Foundation</span>
+              <span class="text-slate-500">•</span>
+              <span class="text-[11px] font-semibold text-slate-300">RIASAT Division</span>
+            </div>
+            <h1 class="text-lg sm:text-xl font-black tracking-tight text-white flex items-center gap-2">
+              RIASAT PAYROLL & MANPOWER PORTAL
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
+                ACTIVE 2026
+              </span>
+            </h1>
+            <p class="text-xs text-slate-400">Ramaiah Institute for Advanced Skills and Technology</p>
+          </div>
+        </div>
+        <div class="flex items-center space-x-3">
+          <button onclick="openAddModal()" class="flex items-center space-x-1.5 bg-[#881337] hover:bg-rose-900 text-white px-3 py-2 rounded-lg text-xs font-bold transition">
+            <i class="fa-solid fa-user-plus"></i>
+            <span class="hidden sm:inline">Add Staff</span>
+          </button>
+          <button onclick="exportCSV()" class="flex items-center space-x-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-2 rounded-lg text-xs font-bold transition">
+            <i class="fa-solid fa-file-csv"></i>
+            <span class="hidden sm:inline">Export CSV</span>
+          </button>
+          <button onclick="window.print()" class="flex items-center space-x-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-2 rounded-lg text-xs font-bold transition">
+            <i class="fa-solid fa-print"></i>
+            <span class="hidden sm:inline">Print Roster</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-slate-200 shadow-sm no-print sticky top-20 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex space-x-8 -mb-px">
+        <button onclick="switchTab('rosterTab')" id="tabBtn-roster" class="tab-btn py-4 px-1 border-b-2 border-[#881337] font-bold text-sm text-[#881337] flex items-center space-x-2">
+          <i class="fa-solid fa-users"></i>
+          <span>Manpower & Payroll Master</span>
+          <span id="badgeCount" class="ml-2 bg-rose-100 text-[#881337] text-xs font-bold px-2 py-0.5 rounded-full">9</span>
+        </button>
+        <button onclick="switchTab('bankTab')" id="tabBtn-bank" class="tab-btn py-4 px-1 border-b-2 border-transparent font-semibold text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2">
+          <i class="fa-solid fa-building-columns"></i>
+          <span>Bank Disbursal Advice (NEFT/RTGS)</span>
+        </button>
+        <button onclick="switchTab('analyticsTab')" id="tabBtn-analytics" class="tab-btn py-4 px-1 border-b-2 border-transparent font-semibold text-sm text-slate-500 hover:text-slate-800 flex items-center space-x-2">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Department Breakdown</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8 no-print">
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total Active Staff</p>
+          <h3 id="kpiStaff" class="text-2xl font-black text-slate-900 mt-1">9</h3>
+          <p class="text-xs text-emerald-600 font-semibold mt-1"><i class="fa-solid fa-check mr-1"></i>Active Roster</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-id-card-clip"></i>
+        </div>
+      </div>
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Bank Accounts Verified</p>
+          <h3 class="text-2xl font-black text-slate-900 mt-1">9 / 9</h3>
+          <p class="text-xs text-emerald-600 font-semibold mt-1"><i class="fa-solid fa-shield-check mr-1"></i>IFSC & PAN Linked</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-building-columns"></i>
+        </div>
+      </div>
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Disbursal Cycle</p>
+          <h3 class="text-2xl font-black text-emerald-700 mt-1">Sept 2026</h3>
+          <p class="text-xs text-slate-500 font-semibold mt-1">Direct Bank Credit</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-money-check-dollar"></i>
+        </div>
+      </div>
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Corporate Banks</p>
+          <h3 class="text-2xl font-black text-slate-900 mt-1">5</h3>
+          <p class="text-xs text-slate-500 font-semibold mt-1">Canara, ICICI, HDFC, Axis, CBI</p>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="rosterTab" class="tab-content">
+      <div class="bg-white p-4 rounded-t-xl border border-slate-200 border-b-0 flex flex-col sm:flex-row gap-4 justify-between items-center no-print">
+        <div class="relative w-full sm:w-80">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+          <input type="text" id="searchInput" onkeyup="filterEmployees()" placeholder="Search staff, role, bank, PAN..." class="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#881337]" />
+        </div>
+        <div class="flex items-center space-x-3 w-full sm:w-auto justify-end">
+          <select id="bankFilter" onchange="filterEmployees()" class="border border-slate-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#881337]">
+            <option value="ALL">All Banks</option>
+            <option value="Canara Bank">Canara Bank</option>
+            <option value="ICICI Bank">ICICI Bank</option>
+            <option value="HDFC Bank">HDFC Bank</option>
+            <option value="Central Bank">Central Bank of India</option>
+            <option value="Axis Bank">Axis Bank</option>
+          </select>
+          <button onclick="toggleMask()" id="maskToggleBtn" class="flex items-center space-x-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 px-3 py-2 rounded-lg text-xs font-semibold border border-slate-300 transition">
+            <i id="maskIcon" class="fa-solid fa-eye-slash"></i>
+            <span id="maskText">Show Full Details</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-b-xl shadow-sm overflow-x-auto">
+        <table class="w-full text-left text-sm text-slate-600">
+          <thead class="bg-slate-100 text-slate-700 text-xs uppercase tracking-wider font-bold border-b border-slate-200">
+            <tr>
+              <th class="py-3.5 px-4">#</th>
+              <th class="py-3.5 px-4">Employee Name</th>
+              <th class="py-3.5 px-4">Designation & Role</th>
+              <th class="py-3.5 px-4">Bank Name & Branch</th>
+              <th class="py-3.5 px-4">Bank Account No</th>
+              <th class="py-3.5 px-4">IFSC Code</th>
+              <th class="py-3.5 px-4">PAN Number</th>
+              <th class="py-3.5 px-4 text-center no-print">Payslip</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody" class="divide-y divide-slate-200 font-medium"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="bankTab" class="tab-content hidden">
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+        <div class="flex justify-between items-center pb-4 border-b border-slate-200">
+          <div>
+            <h2 class="text-lg font-bold text-slate-900">Corporate Bank NEFT / RTGS Disbursal Roster</h2>
+            <p class="text-xs text-slate-500">Verified bank account & IFSC mapping for September 2026</p>
+          </div>
+          <button onclick="copyBatch()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-copy"></i>
+            <span>Copy Batch Data</span>
+          </button>
+        </div>
+        <div class="mt-4 overflow-x-auto font-mono text-xs">
+          <table class="w-full text-left">
+            <thead class="bg-slate-100 text-slate-700 uppercase">
+              <tr>
+                <th class="p-3">Ref ID</th>
+                <th class="p-3">Beneficiary</th>
+                <th class="p-3">Bank Name</th>
+                <th class="p-3">Account Number</th>
+                <th class="p-3">IFSC</th>
+                <th class="p-3">Mode</th>
+              </tr>
+            </thead>
+            <tbody id="bankBatchBody" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="analyticsTab" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-[#881337]"></i>
+            Department / Role Distribution
+          </h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Executive Leadership (VP Strategy, VP HR, Ops Head)</span>
+              <span class="font-bold bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-full text-xs">3 Staff</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Technical Training & Engineering (CAD/CAM, CAE)</span>
+              <span class="font-bold bg-purple-100 text-purple-800 px-2.5 py-0.5 rounded-full text-xs">3 Staff</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Student Counselling & Academic Support</span>
+              <span class="font-bold bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded-full text-xs">2 Staff</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Administrative Operations (Staff Officer)</span>
+              <span class="font-bold bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full text-xs">1 Staff</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-building-columns text-[#0e1e38]"></i>
+            Bank Account Breakdown
+          </h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Canara Bank</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">3 Staff (33%)</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">ICICI Bank</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">2 Staff (22%)</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">HDFC Bank Ltd</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">1 Staff (11%)</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Axis Bank</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">1 Staff (11%)</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">Central Bank of India</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">1 Staff (11%)</span>
+            </div>
+            <div class="flex justify-between py-2 border-b border-slate-100">
+              <span class="text-slate-700">IDFB Bank</span>
+              <span class="font-bold bg-slate-100 text-slate-800 px-2.5 py-0.5 rounded-full text-xs">1 Staff (11%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="payslipModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200">
+      <div class="p-6 border-b border-slate-200 flex justify-between items-center no-print">
+        <h3 class="text-base font-bold text-slate-900">Official Payslip Preview</h3>
+        <div class="flex items-center space-x-2">
+          <button onclick="window.print()" class="bg-[#0e1e38] text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-print"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button onclick="closePayslipModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold p-1">&times;</button>
+        </div>
+      </div>
+      <div id="printablePayslip" class="p-8"></div>
+    </div>
+  </div>
+
+  <div id="addModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200">
+      <div class="flex justify-between items-center pb-4 border-b border-slate-200 mb-4">
+        <h3 class="text-base font-bold text-slate-900">Add Staff Record</h3>
+        <button onclick="closeAddModal()" class="text-slate-400 hover:text-slate-600 text-xl font-bold">&times;</button>
+      </div>
+      <form id="addForm" onsubmit="saveStaff(event)" class="space-y-4 text-xs font-bold text-slate-700">
+        <div>
+          <label class="block mb-1">Full Name</label>
+          <input type="text" id="newName" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal focus:ring-2 focus:ring-[#881337]" />
+        </div>
+        <div>
+          <label class="block mb-1">Designation & Role</label>
+          <input type="text" id="newDesignation" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal focus:ring-2 focus:ring-[#881337]" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block mb-1">Bank Name</label>
+            <input type="text" id="newBank" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal" />
+          </div>
+          <div>
+            <label class="block mb-1">Branch</label>
+            <input type="text" id="newBranch" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal" />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block mb-1">Account Number</label>
+            <input type="text" id="newAcc" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal" />
+          </div>
+          <div>
+            <label class="block mb-1">IFSC Code</label>
+            <input type="text" id="newIFSC" required class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal uppercase" />
+          </div>
+        </div>
+        <div>
+          <label class="block mb-1">PAN Number</label>
+          <input type="text" id="newPAN" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm font-normal uppercase" />
+        </div>
+        <div class="pt-4 border-t border-slate-200 flex justify-end space-x-2">
+          <button type="button" onclick="closeAddModal()" class="px-4 py-2 rounded-lg text-slate-600 bg-slate-100 hover:bg-slate-200">Cancel</button>
+          <button type="submit" class="px-4 py-2 rounded-lg text-white bg-[#881337] hover:bg-rose-900">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 no-print">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-bold text-slate-700">Ramaiah Institute for Advanced Skills and Technology (RIASAT)</p>
+      <p class="mt-1 text-slate-400">Payroll & Manpower Administration • Master Data from 08-09-2026_RIASAT_MANPOWER.xlsx</p>
+    </div>
+  </footer>
+
+  <script>
+    const initialEmployees = [
+  {
+    "id": 1,
+    "name": "R Satish Kumar",
+    "designation": "Centre Manager  cum CAD/CAM/CAE Trainer",
+    "accountNo": "3565340567",
+    "bankName": "Central Bank of India",
+    "branch": "Yelahanka Branch , Bagalore",
+    "ifsc": "CBIN0283694",
+    "pan": "CFKPK5085G",
+    "aadhar": "517000000000"
+  },
+  {
+    "id": 2,
+    "name": "K Hanumanthappa Chowdary",
+    "designation": "Operations Head",
+    "accountNo": "201549843",
+    "bankName": "ICICI Bank",
+    "branch": "M G Road Branch, Bangalore",
+    "ifsc": "ICIC0000002",
+    "pan": "AKXPK2445E",
+    "aadhar": "406000000000"
+  },
+  {
+    "id": 3,
+    "name": "Keerthi V Nair",
+    "designation": "Counsellor",
+    "accountNo": "10227067736",
+    "bankName": "IDFB Bank",
+    "branch": "Nagarbhavi Branch, Bangalore",
+    "ifsc": "IDFB0081178",
+    "pan": "BPXPN9201F",
+    "aadhar": "387000000000"
+  },
+  {
+    "id": 4,
+    "name": "Bharathi K",
+    "designation": "Counsellor",
+    "accountNo": "2700000000000",
+    "bankName": "Canara Bank",
+    "branch": "Rajajinagar Branch, Bangalore",
+    "ifsc": "CNRB0002698",
+    "pan": "BTIPK1650A",
+    "aadhar": "686000000000"
+  },
+  {
+    "id": 5,
+    "name": "Saatvik M",
+    "designation": "Project Engineer - CAE",
+    "accountNo": "550000000000",
+    "bankName": "Canara Bank",
+    "branch": "Ramanthapura Branch, Hassan",
+    "ifsc": "CNRB0000550",
+    "pan": "GICPS1554R",
+    "aadhar": "643000000000"
+  },
+  {
+    "id": 6,
+    "name": "Rohan Ghodke",
+    "designation": "Staff Officer",
+    "accountNo": "50100000000000",
+    "bankName": "HDFC Bank Ltd",
+    "branch": "Gurgoan Main Branch",
+    "ifsc": "HDFC0000090",
+    "pan": "BROPG8722M",
+    "aadhar": "Verified"
+  },
+  {
+    "id": 7,
+    "name": "Avinash Gopal Ghodgaonkar",
+    "designation": "Vice President - Strategy & Process",
+    "accountNo": "55201500750",
+    "bankName": "ICICI Bank",
+    "branch": "Bangalore Infosys",
+    "ifsc": "ICIC0000552",
+    "pan": "AAAPG6281F",
+    "aadhar": "894000000000"
+  },
+  {
+    "id": 8,
+    "name": "Sumedha P",
+    "designation": "Application Engineer",
+    "accountNo": "110000000000",
+    "bankName": "Canara Bank",
+    "branch": "Kanhangad",
+    "ifsc": "CNRB0000724",
+    "pan": "OROPS2039Q",
+    "aadhar": "379000000000"
+  },
+  {
+    "id": 9,
+    "name": "Anamika Sahay",
+    "designation": "Vice President - Human Resources",
+    "accountNo": "920000000000000",
+    "bankName": "Axis Bank",
+    "branch": "Halasuru Road Branch, Bangalore",
+    "ifsc": "UTIB0003199",
+    "pan": "APGPS3497G",
+    "aadhar": "713000000000"
+  }
+];
+    let employees = JSON.parse(localStorage.getItem("riasat_employees_v1")) || initialEmployees;
+    let isMasked = true;
+
+    function renderTable() {
+      const tbody = document.getElementById("employeeTableBody");
+      tbody.innerHTML = "";
+      employees.forEach((emp, i) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-50 transition border-b border-slate-200";
+        const maskedAcc = isMasked && emp.accountNo ? "••••" + emp.accountNo.slice(-4) : emp.accountNo;
+        const maskedPAN = isMasked && emp.pan ? emp.pan.slice(0,3) + "•••" + emp.pan.slice(-2) : emp.pan;
+        tr.innerHTML = `
+          <td class="py-3.5 px-4 font-bold text-slate-400">${i + 1}</td>
+          <td class="py-3.5 px-4">
+            <div class="font-bold text-slate-900">${emp.name}</div>
+            <div class="text-[11px] text-slate-400 font-mono">EMP-0${emp.id}</div>
+          </td>
+          <td class="py-3.5 px-4">
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold badge-dept">${emp.designation}</span>
+          </td>
+          <td class="py-3.5 px-4">
+            <div class="font-semibold text-slate-800">${emp.bankName}</div>
+            <div class="text-[11px] text-slate-400">${emp.branch}</div>
+          </td>
+          <td class="py-3.5 px-4 font-mono font-semibold text-slate-700">${maskedAcc}</td>
+          <td class="py-3.5 px-4 font-mono text-xs font-bold text-slate-600">${emp.ifsc}</td>
+          <td class="py-3.5 px-4 font-mono text-xs font-bold text-slate-600">${maskedPAN}</td>
+          <td class="py-3.5 px-4 text-center no-print">
+            <button onclick="viewPayslip(${emp.id})" class="inline-flex items-center space-x-1 bg-slate-100 hover:bg-[#881337] hover:text-white text-slate-700 px-3 py-1.5 rounded-lg text-xs font-bold transition">
+              <i class="fa-regular fa-file-lines"></i>
+              <span>Payslip</span>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+      document.getElementById("badgeCount").innerText = employees.length;
+      document.getElementById("kpiStaff").innerText = employees.length;
+      renderBank();
+    }
+
+    function renderBank() {
+      const tbody = document.getElementById("bankBatchBody");
+      tbody.innerHTML = "";
+      employees.forEach((emp, i) => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-50";
+        tr.innerHTML = `
+          <td class="p-3 text-slate-400">PAY-SEP26-0${i+1}</td>
+          <td class="p-3 font-bold text-slate-900">${emp.name}</td>
+          <td class="p-3 text-slate-600">${emp.bankName}</td>
+          <td class="p-3 font-bold text-slate-800 font-mono">${emp.accountNo}</td>
+          <td class="p-3 text-slate-700 font-bold font-mono">${emp.ifsc}</td>
+          <td class="p-3"><span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold text-[10px]">NEFT</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function toggleMask() {
+      isMasked = !isMasked;
+      document.getElementById("maskText").innerText = isMasked ? "Show Full Details" : "Mask Details";
+      document.getElementById("maskIcon").className = isMasked ? "fa-solid fa-eye-slash" : "fa-solid fa-eye";
+      renderTable();
+    }
+
+    function switchTab(id) {
+      document.querySelectorAll(".tab-content").forEach(el => el.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+      document.querySelectorAll(".tab-btn").forEach(el => {
+        el.classList.remove("border-[#881337]", "text-[#881337]");
+        el.classList.add("border-transparent", "text-slate-500");
+      });
+      const btn = id === 'rosterTab' ? 'tabBtn-roster' : (id === 'bankTab' ? 'tabBtn-bank' : 'tabBtn-analytics');
+      document.getElementById(btn).classList.add("border-[#881337]", "text-[#881337]");
+      document.getElementById(btn).classList.remove("border-transparent", "text-slate-500");
+    }
+
+    function filterEmployees() {
+      const q = document.getElementById("searchInput").value.toLowerCase();
+      const bank = document.getElementById("bankFilter").value;
+      const rows = document.getElementById("employeeTableBody").getElementsByTagName("tr");
+      for (let i = 0; i < employees.length; i++) {
+        const emp = employees[i];
+        const match = (emp.name + " " + emp.designation + " " + emp.bankName + " " + emp.pan).toLowerCase().includes(q);
+        const matchBank = bank === "ALL" || emp.bankName.includes(bank);
+        rows[i].style.display = match && matchBank ? "" : "none";
+      }
+    }
+
+    function viewPayslip(id) {
+      const emp = employees.find(e => e.id === id);
+      if (!emp) return;
+      document.getElementById("printablePayslip").innerHTML = `
+        <div class="border-b-2 border-slate-900 pb-4 mb-6">
+          <div class="flex justify-between items-start">
+            <div>
+              <h2 class="text-xl font-black text-slate-900">RAMAIAH ACADEMY FOUNDATION</h2>
+              <p class="text-xs font-bold text-amber-700 uppercase">Ramaiah Institute for Advanced Skills and Technology (RIASAT)</p>
+              <p class="text-[11px] text-slate-500">MSR Nagar, Gnanagangothri Campus, Bengaluru 560054</p>
+            </div>
+            <div class="text-right">
+              <span class="inline-block bg-[#0e1e38] text-white text-xs font-black px-3 py-1 rounded">SALARY SLIP</span>
+              <p class="text-xs font-bold text-slate-700 mt-1">Period: September 2026</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 text-xs">
+          <div><span class="text-slate-500">Employee Name:</span> <strong class="text-slate-900">${emp.name}</strong></div>
+          <div><span class="text-slate-500">Designation:</span> <strong class="text-slate-900">${emp.designation}</strong></div>
+          <div><span class="text-slate-500">Employee ID:</span> <strong class="text-slate-900 font-mono">RAF-2026-0${emp.id}</strong></div>
+          <div><span class="text-slate-500">Bank Name:</span> <strong class="text-slate-900">${emp.bankName}</strong></div>
+          <div><span class="text-slate-500">Account No:</span> <strong class="text-slate-900 font-mono">${emp.accountNo}</strong></div>
+          <div><span class="text-slate-500">IFSC Code:</span> <strong class="text-slate-900 font-mono">${emp.ifsc}</strong></div>
+          <div><span class="text-slate-500">PAN Number:</span> <strong class="text-slate-900 font-mono">${emp.pan}</strong></div>
+          <div><span class="text-slate-500">Status:</span> <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded text-[10px]">VERIFIED & APPROVED</span></div>
+        </div>
+        <div class="border border-slate-200 rounded-xl overflow-hidden mb-6 text-xs">
+          <table class="w-full">
+            <thead class="bg-slate-100 font-bold text-slate-700">
+              <tr>
+                <th class="p-3 text-left">Earnings Head</th>
+                <th class="p-3 text-right">Amount (INR)</th>
+                <th class="p-3 text-left border-l border-slate-200">Deductions Head</th>
+                <th class="p-3 text-right">Amount (INR)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-3">Basic Pay</td>
+                <td class="p-3 text-right font-mono font-bold">As per CTC</td>
+                <td class="p-3 border-l border-slate-200">Provident Fund (PF)</td>
+                <td class="p-3 text-right font-mono font-bold">Statutory</td>
+              </tr>
+              <tr>
+                <td class="p-3">HRA Allowance</td>
+                <td class="p-3 text-right font-mono font-bold">Standard</td>
+                <td class="p-3 border-l border-slate-200">Professional Tax (PT)</td>
+                <td class="p-3 text-right font-mono font-bold">₹ 200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex justify-between items-center bg-slate-900 text-white p-4 rounded-xl text-sm font-bold">
+          <span>Net Salary Disbursal to Bank</span>
+          <span class="font-mono text-emerald-400">Direct Bank Credit Verified</span>
+        </div>
+        <div class="mt-8 pt-6 border-t border-slate-200 flex justify-between text-[11px] text-slate-400">
+          <div><p class="font-bold text-slate-600">Prepared by:</p><p>RIASAT Payroll Administration</p></div>
+          <div class="text-right"><p class="font-bold text-slate-600">Authorized Signatory:</p><p>Ramaiah Academy Foundation</p></div>
+        </div>
+      `;
+      document.getElementById("payslipModal").classList.remove("hidden");
+    }
+
+    function closePayslipModal() {
+      document.getElementById("payslipModal").classList.add("hidden");
+    }
+
+    function openAddModal() {
+      document.getElementById("addModal").classList.remove("hidden");
+    }
+
+    function closeAddModal() {
+      document.getElementById("addModal").classList.add("hidden");
+    }
+
+    function saveStaff(e) {
+      e.preventDefault();
+      const newE = {
+        id: employees.length + 1,
+        name: document.getElementById("newName").value,
+        designation: document.getElementById("newDesignation").value,
+        bankName: document.getElementById("newBank").value,
+        branch: document.getElementById("newBranch").value || "Bangalore",
+        accountNo: document.getElementById("newAcc").value,
+        ifsc: document.getElementById("newIFSC").value.toUpperCase(),
+        pan: document.getElementById("newPAN").value.toUpperCase()
+      };
+      employees.push(newE);
+      localStorage.setItem("riasat_employees_v1", JSON.stringify(employees));
+      renderTable();
+      closeAddModal();
+      document.getElementById("addForm").reset();
+    }
+
+    function exportCSV() {
+      let csv = "Sl No,Employee Name,Designation,Bank Name,Branch,Account No,IFSC,PAN\n";
+      employees.forEach((e, i) => {
+        csv += `${i+1},"${e.name}","${e.designation}","${e.bankName}","${e.branch}","'${e.accountNo}'","${e.ifsc}","${e.pan}"\n`;
+      });
+      const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "RIASAT_Payroll_Master_2026.csv";
+      a.click();
+    }
+
+    function copyBatch() {
+      let t = "NAME\tBANK\tACCOUNT\tIFSC\n";
+      employees.forEach(e => { t += `${e.name}\t${e.bankName}\t${e.accountNo}\t${e.ifsc}\n`; });
+      navigator.clipboard.writeText(t).then(() => { alert("Copied batch payment list!"); });
+    }
+
+    renderTable();
+  </script>
 </body>
 </html>
